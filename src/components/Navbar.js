@@ -5,7 +5,7 @@ function Navbar() {
       <header className="navbar">
         <nav className="navbar-inner">
           <a className="navbar-link">Home</a>
-          <a className="navbar-link">Services</a>
+          <a className="navbar-link">Activities</a>
           <a className="navbar-link">About</a>
           <a className="navbar-link">Contact</a>
         </nav>
