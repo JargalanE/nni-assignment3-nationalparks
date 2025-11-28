@@ -21,7 +21,7 @@ body, html, section{
   right: 0;
 
   background: #515a47b3; /* your color */
-  padding: 0.75rem 0;
+  padding: 0.2rem 0;
   text-align: center;
 
   z-index: 1000;          /* stay above everything */
@@ -142,5 +142,45 @@ body, html, section{
   text-decoration: underline;
 }
 
+.Contact{
+  height: 100vh;
+  background-color: beige;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem 2rem 5rem;
+}
 
+#name, #email{
+  width: 500px;
+  margin-bottom: 1rem;
+}
 
+#message{
+  width: 500px;
+  height: 300px;
+  line-height: normal;
+  padding: 4px;
+  vertical-align: top;
+  margin-bottom: 1rem;
+}
+
+#submit{
+  text-align: center;
+  
+}
+
+#submit input{
+  background-color: #515a47;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 999px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: none;
+  font-weight: bold;
+}
+
+.Contact label{
+  font-weight: bold;
+}
