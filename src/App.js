@@ -16,7 +16,7 @@ function App() {
         <p>Learn more about National Parks and explore all the services that the total of 63 parks provide.</p>
         <button className='start-button'
           onClick={() => {
-            const section = document.getElementById("services");
+            const section = document.getElementById("activities-section");
             if (section) {
               section.scrollIntoView({ behavior: "smooth" });
             }

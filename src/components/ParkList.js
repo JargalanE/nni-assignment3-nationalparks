@@ -6,7 +6,7 @@ function ParkList({ activity, parks, onBack, onSelectPark }) {
   
         <ul>
           {parks.map(park => (
-            <li key={park.id}>
+            <li key={park.parkCode}>
               <button onClick={() => onSelectPark(park)}>
                 {park.fullName} ({park.states})
               </button>

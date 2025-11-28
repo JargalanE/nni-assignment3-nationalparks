@@ -24,15 +24,16 @@ function ActivitySearch({ onActivitySelected }) {
 
   const handleClick = async (activity) => {
     const activityParks = await fetchParksByActivity(activity.id);
-    const parkCodes = activityParks.flatMap(ap =>
-      ap.parks.map(p => p.parkCode)
-    );
-    const unique = [...new Set(parkCodes)];
+    const allParks = activityParks.flatMap(ap => ap.parks);
+
+    const seen = new Set();
     const parks = [];
-    for (const code of unique) {
-      const park = await fetchParkByCode(code);
-      parks.push(park);
-    }
+    for (const p of allParks) {
+      if (!seen.has(p.parkCode)) {
+        seen.add(p.parkCode);
+        parks.push(p);
+      }
+    }  
     onActivitySelected(activity, parks);
   };
 

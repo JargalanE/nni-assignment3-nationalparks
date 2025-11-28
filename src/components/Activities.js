@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import ActivitySearch from "./ActivitySearch";
 import ParkList from "./ParkList";
 import ParkDetails from "./ParkDetails";
+import { fetchParkByCode } from "../api/nps";
+
 
 function Activities(){
   const [selectedActivity, setSelectedActivity] = useState(null);
@@ -10,7 +12,7 @@ function Activities(){
   const [selectedPark, setSelectedPark] = useState(null);
 
   return (
-    <div className="activities-section">
+    <div className="activities-section" id="activities-section">
 
       <h2 className="title">ACTIVITIES</h2>
 
@@ -33,7 +35,10 @@ function Activities(){
               setSelectedActivity(null);
               setParks([]);
             }}
-            onSelectPark={(park) => setSelectedPark(park)}
+            onSelectPark={async (parkStub) => {
+              const fullPark = await fetchParkByCode(parkStub.parkCode);
+              setSelectedPark(fullPark);
+            }}            
           />
         )}
 
