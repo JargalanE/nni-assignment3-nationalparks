@@ -20,7 +20,7 @@ body, html, section{
   left: 0;
   right: 0;
 
-  background: #515a47b3; /* your color */
+  background: #515a47b3; 
   padding: 0.2rem 0;
   text-align: center;
 
@@ -142,6 +142,7 @@ body, html, section{
   text-decoration: underline;
 }
 
+/* ===== Contact Page ===== */
 .Contact{
   height: 100vh;
   background-color: beige;
@@ -184,3 +185,73 @@ body, html, section{
 .Contact label{
   font-weight: bold;
 }
+
+
+/* ===== About Page ===== */
+
+.About, .everypark, .goal{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.goal{
+  background-color: #515a47;
+  border-radius: 20px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.everypark{
+  background-color: #d7be82;
+  border-radius: 20px;
+  text-align: center;
+  padding: 1rem;
+}
+
+.head{
+  font-size: x-large;
+  padding-bottom: 1rem;
+}
+
+.parks-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px 20px;
+  padding-left: 20px; 
+}
+
+.park-item {
+  list-style-type: disc; 
+}
+
+/* ===== Park List organizer ===== */
+
+.park-list {
+  columns: 2;              
+  column-gap: 40px;
+  padding-left: 40px;       
+  width: fit-content;       
+  margin: 0 auto;          
+  list-style-position: outside; 
+}
+
+.park-list li {
+  break-inside: avoid;
+  margin-bottom: 6px;
+  text-align: left;        
+}
+
+.park-list li button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: left;        
+}
+
+
+
+

@@ -4,7 +4,7 @@ function ParkList({ activity, parks, onBack, onSelectPark }) {
         <button onClick={onBack}>← Back to activities</button>
         <h2>Parks with: {activity.name}</h2>
   
-        <ul>
+        <ul className="park-list">
           {parks.map(park => (
             <li key={park.parkCode}>
               <button onClick={() => onSelectPark(park)}>

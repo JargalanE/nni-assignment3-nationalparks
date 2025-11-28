@@ -23,6 +23,20 @@ async function npsFetch(path, params = {}) {
     const data = await res.json();
     return data.data;
   }
+
+  export async function getAllParkNames() {
+    const url = `${BASE_URL}/parks?api_key=${API_KEY}&limit=500`;
+  
+    const res = await fetch(url);
+    if (!res.ok){
+      throw new Error("Failed to fetch NPS parks.");
+    } 
+  
+    const data = await res.json();
+  
+    return data.data.map((park) => park.fullName);
+  }
+  
   
 export async function fetchActivities() {
     return npsFetch('/activities', { limit: 100 });
