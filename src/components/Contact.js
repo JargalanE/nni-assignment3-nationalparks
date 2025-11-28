@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
+
 function Contact() {
   const formRef = useRef();
 
@@ -9,10 +10,10 @@ function Contact() {
 
     emailjs
       .sendForm(
-        "service_xcxjniv",   
-        "template_3rn4iaa",  
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,   
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,  
         formRef.current,
-        "xvl4G92SNPdbG5alI"    
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY   
       )
       .then(
         () => {
