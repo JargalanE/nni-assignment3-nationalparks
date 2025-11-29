@@ -13,6 +13,12 @@ body, html, section{
   font-optical-sizing: auto;
 }
 
+.title {
+  font-size: 2rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 /* ===== NavBar ===== */
 .navbar {
   position: fixed;        /* stick to the viewport */
@@ -20,7 +26,7 @@ body, html, section{
   left: 0;
   right: 0;
 
-  background: #515a47b3; 
+  background: #6e85b7; 
   padding: 0.2rem 0;
   text-align: center;
 
@@ -29,10 +35,11 @@ body, html, section{
 
 
 .navbar-link{
-  font-size: 2em;
+  font-size: 1.8em;
   padding: 5px 50px;
   color: black;
   text-decoration: none;
+  font-family: "National Park", sans-serif;
   background: none;
   border: none;
 }
@@ -42,6 +49,7 @@ body, html, section{
   height: 100vh;
   background-image: url('./home-bg.jpg');
   background-size: cover;
+  text-align: center;
 }
 
 .home-page{
@@ -76,25 +84,23 @@ body, html, section{
 /* ===== Activities page ===== */
 
 .activities-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 4rem 2rem 5rem;
   background-color: #d7be82;
   text-align: center;
   min-height: 100vh;
 }
 
-.title {
-  font-size: 2rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 2.5rem;
-}
+
 
 .activities-grid {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 2rem 1.5rem; /* row gap, column gap */
+  gap: 2rem 1.5rem; 
 }
 
 .search-input {
@@ -102,11 +108,9 @@ body, html, section{
   padding: 12px;
   border-radius: 10px;
   border: 1px solid #888;
-  margin-bottom: 30px;
+  margin: 30px auto;
   font-size: 16px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 
@@ -125,8 +129,6 @@ body, html, section{
   display: block;
 }
 
-
-
 .activity-button {
   margin-top: 0.5rem;
   border: none;
@@ -144,10 +146,28 @@ body, html, section{
   text-decoration: underline;
 }
 
+.back_button{
+  border-radius: 1rem;
+  padding: 0.5rem 2rem;
+  margin: 1rem 2rem;
+
+}
+
+.park_title{
+  margin: 1.5rem;
+}
+
+.park_description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
 /* ===== Contact Page ===== */
 .Contact{
   height: 100vh;
-  background-color: beige;
+  background-color: #d7be82;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -174,7 +194,7 @@ body, html, section{
 }
 
 #submit input{
-  background-color: #515a47;
+  background-color: #c8e6d6;
   border: none;
   padding: 12px 40px;
   border-radius: 999px;
@@ -195,18 +215,21 @@ body, html, section{
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 2rem;
+  padding: 4rem;
+  background-color: #a3c9a6;
 }
 
 .goal{
-  background-color: #515a47;
+  background-color: #eee8ae;
   border-radius: 20px;
-  padding: 1rem;
+  padding: 3rem;
+  margin: 3rem;
   text-align: center;
+  width: 500px;
 }
 
 .everypark{
-  background-color: #d7be82;
+  background-color: #eee8ae;
   border-radius: 20px;
   text-align: center;
   padding: 1rem;
@@ -218,31 +241,34 @@ body, html, section{
 }
 
 .parks-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 8px 20px;
-  padding-left: 20px; 
+  column-count: 4;      
+  column-gap: 40px;                
+  column-rule: 2px solid black;    
+  list-style: none;                
+  gap: 100rem 2rem;
 }
 
-.park-item {
-  list-style-type: disc; 
+.park-item{
+  margin-bottom: 2rem;
 }
+
+
 
 /* ===== Park List organizer ===== */
 
 .park-list {
-  columns: 3;              
-  column-gap: 40px;
-  padding-left: 40px;       
-  width: fit-content;       
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));  
+  gap: 8px 40px;           
+  max-width: 900px;
   margin: 0 auto;          
-  list-style-position: outside; 
+  padding: 0;             
+  list-style: disc;       
+  text-align: left;        
 }
 
 .park-list li {
-  break-inside: avoid;
-  margin-bottom: 6px;
-  text-align: left;        
+  margin: 0;
 }
 
 .park-list li button {
@@ -251,7 +277,11 @@ body, html, section{
   padding: 0;
   font-size: 15px;
   cursor: pointer;
-  text-align: left;        
+  text-align: left;     
+}
+
+.park-list li button:hover{
+  text-decoration: underline;
 }
 
 

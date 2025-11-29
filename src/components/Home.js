@@ -3,7 +3,7 @@ function Home(){
         <div className="home-page-whole" id="home-section">
             <div className='home-page'>
                 <h1>Welcome to National Parks</h1>
-                <p>Learn more about National Parks and explore all the services that the total of 63 parks provide.</p>
+                <p>Learn more about National Parks and explore all the services that parks offer.</p>
                 <button className='start-button'
                 onClick={() => {
                     const section = document.getElementById("activities-section");

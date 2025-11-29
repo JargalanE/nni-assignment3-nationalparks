@@ -1,8 +1,8 @@
 function ParkList({ activity, parks, onBack, onSelectPark }) {
     return (
       <div>
-        <button onClick={onBack}>← Back to activities</button>
-        <h2>Parks with: {activity.name}</h2>
+        <button onClick={onBack} className="back_button">← Back to activities</button>
+        <h2 className="park_title">Parks with: {activity.name}</h2>
   
         <ul className="park-list">
           {parks.map(park => (
@@ -13,6 +13,7 @@ function ParkList({ activity, parks, onBack, onSelectPark }) {
             </li>
           ))}
         </ul>
+        
       </div>
     );
   }
