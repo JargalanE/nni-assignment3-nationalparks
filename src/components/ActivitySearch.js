@@ -50,7 +50,12 @@ function ActivitySearch({ onActivitySelected }) {
       <div className="activities-grid">
         {filtered.map((activity) => (
           <div className="activity-card" key={activity.id}>
-            <div className="activity-image" />
+            <img
+              className="activity-image"
+              src={`/icons/${activity.name.toLowerCase().replace(/ /g, "_")}.svg`}
+              alt={activity.name}
+            />
+
             <button
               className="activity-button"
               onClick={() => handleClick(activity)}
