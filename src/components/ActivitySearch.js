@@ -52,7 +52,7 @@ function ActivitySearch({ onActivitySelected }) {
           <div className="activity-card" key={activity.id}>
             <img
               className="activity-image"
-              src={`/icons/${activity.name.toLowerCase().replace(/ /g, "_")}.svg`}
+              src={`icons/${activity.name.toLowerCase().replace(/ /g, "_")}.svg`}
               alt={activity.name}
             />
 
