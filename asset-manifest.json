@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/nni-assignment3-nationalparks/static/css/main.47ddf9e7.css",
-    "main.js": "/nni-assignment3-nationalparks/static/js/main.cadfed28.js",
+    "main.js": "/nni-assignment3-nationalparks/static/js/main.4db88509.js",
     "static/js/453.f51db76f.chunk.js": "/nni-assignment3-nationalparks/static/js/453.f51db76f.chunk.js",
     "static/media/home-bg.jpg": "/nni-assignment3-nationalparks/static/media/home-bg.53676d7162871482ee53.jpg",
     "index.html": "/nni-assignment3-nationalparks/index.html",
     "main.47ddf9e7.css.map": "/nni-assignment3-nationalparks/static/css/main.47ddf9e7.css.map",
-    "main.cadfed28.js.map": "/nni-assignment3-nationalparks/static/js/main.cadfed28.js.map",
+    "main.4db88509.js.map": "/nni-assignment3-nationalparks/static/js/main.4db88509.js.map",
     "453.f51db76f.chunk.js.map": "/nni-assignment3-nationalparks/static/js/453.f51db76f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.47ddf9e7.css",
-    "static/js/main.cadfed28.js"
+    "static/js/main.4db88509.js"
   ]
 }
